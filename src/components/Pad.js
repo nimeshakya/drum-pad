@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import sound from './audio/Heater-1.mp3';
 
 const Pad = ({ triggerKey, file, id }) => {
     const audioRef = useRef(null);
@@ -6,6 +7,7 @@ const Pad = ({ triggerKey, file, id }) => {
     const handlePadHit = () => {
         console.log(audioRef.current);
         audioRef.current.play();
+        console.log(sound);
     };
 
     return (
