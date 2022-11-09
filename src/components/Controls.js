@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Controls = () => {
+const Controls = ({ currentSound }) => {
     return (
         <div id='controls-containers'>
             <h1 id='machine-name'>Drum Machine</h1>
-            <p id='display'>controls</p>
+            <p id='display'>{currentSound}</p>
             <input
                 type='range'
                 name='volume-slider'

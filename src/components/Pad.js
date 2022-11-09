@@ -1,14 +1,23 @@
-import React, { useRef } from 'react';
-import sound from './audio/Heater-1.mp3';
+import React, { useRef, useEffect } from 'react';
 
-const Pad = ({ triggerKey, file, id }) => {
+const Pad = ({ play, removeClass, triggerKey, file, id, keyCode }) => {
     const audioRef = useRef(null);
 
     const handlePadHit = () => {
-        console.log(audioRef.current);
         audioRef.current.play();
-        console.log(sound);
+        audioRef.current.parentElement.className = 'drum-pad-active';
+        setTimeout(() => removeClass(audioRef.current), 100);
     };
+
+    const handleKeyDown = (event) => {
+        if (event.keyCode === keyCode) {
+            play(triggerKey);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyDown);
+    });
 
     return (
         <div className='drum-pad' id={id} onClick={handlePadHit}>

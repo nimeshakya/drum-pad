@@ -45,6 +45,19 @@
     border-radius: 5px;
 }
 
+.drum-pad-active {
+    background-color: #ff39d7;
+    color: #383838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+    border-radius: 5px;
+}
+
 #controls-containers {
     width: 50%;
     height: 100%;
@@ -62,6 +75,7 @@
 #display {
     display: block;
     width: 100%;
+    min-height: 50px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -72,10 +86,6 @@
     color: #383838;
     font-size: 1.5rem;
     border-radius: 5px;
-}
-/* some css to do while hovering tab? */
-.display-hovered {
-    background-color: yellow;
 }
 
 #volume-slider {

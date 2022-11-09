@@ -10,46 +10,55 @@ import cev_h2 from './audio/Cev_H2.mp3';
 
 export const padData = [
     {
+        keyCode: 81,
         trigger_key: 'Q',
         file_name: heater1,
         id: 'Heater-1',
     },
     {
+        keyCode: 87,
         trigger_key: 'W',
         file_name: heater2,
         id: 'Heater-2',
     },
     {
+        keyCode: 69,
         trigger_key: 'E',
         file_name: heater3,
         id: 'Heater-3',
     },
     {
+        keyCode: 65,
         trigger_key: 'A',
         file_name: heater4,
         id: 'Heater-4',
     },
     {
+        keyCode: 83,
         trigger_key: 'S',
         file_name: heater6,
         id: 'Clap',
     },
     {
+        keyCode: 68,
         trigger_key: 'D',
         file_name: dsc_oh,
         id: 'Open-HH',
     },
     {
+        keyCode: 90,
         trigger_key: 'Z',
         file_name: kick_n_hat,
         id: "Kick-n'-Hat",
     },
     {
+        keyCode: 88,
         trigger_key: 'X',
         file_name: rp4_kick_1,
         id: 'Kick',
     },
     {
+        keyCode: 67,
         trigger_key: 'C',
         file_name: cev_h2,
         id: 'Closed-HH',
