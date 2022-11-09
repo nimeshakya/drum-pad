@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #drum-machine {
@@ -19,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blue;
+    background-color: #383838;
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 10px;
@@ -46,7 +47,8 @@
 }
 
 .drum-pad-active {
-    background-color: #ff39d7;
+    background-color: #55beff;
+    /* box-shadow: 0px 0px 100px 30px #78dffc84; */
     color: #383838;
     display: flex;
     justify-content: center;
@@ -91,4 +93,15 @@
 #volume-slider {
     width: 90%;
     background-color: powderblue;
+}
+
+#creator {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #383838;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#creator-link {
+    color: #55beff;
 }

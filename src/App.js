@@ -8,6 +8,7 @@ import { padData } from './pad_data';
 const App = () => {
     // function uses vanilla javascript because I don't know other way currently
     const [currentSound, setCurrentSound] = useState('');
+    const [volume, setVolume] = useState(0.5);
 
     const removeClass = (audio) => {
         audio.parentElement.className = 'drum-pad';
@@ -23,24 +24,41 @@ const App = () => {
     };
 
     return (
-        <div id='drum-machine'>
-            <div id='pad-container'>
-                {padData.map((pad) => {
-                    return (
-                        <Pad
-                            play={play}
-                            removeClass={removeClass}
-                            key={pad.id}
-                            triggerKey={pad.trigger_key}
-                            file={pad.file_name}
-                            id={pad.id}
-                            keyCode={pad.keyCode}
-                        />
-                    );
-                })}
+        <>
+            <div id='drum-machine'>
+                <div id='pad-container'>
+                    {padData.map((pad) => {
+                        return (
+                            <Pad
+                                play={play}
+                                removeClass={removeClass}
+                                key={pad.id}
+                                triggerKey={pad.trigger_key}
+                                file={pad.file_name}
+                                id={pad.id}
+                                keyCode={pad.keyCode}
+                                volume={volume}
+                            />
+                        );
+                    })}
+                </div>
+                <Controls
+                    currentSound={currentSound}
+                    setCurrentSound={setCurrentSound}
+                    volume={volume}
+                    setVolume={setVolume}
+                />
             </div>
-            <Controls currentSound={currentSound} />
-        </div>
+            <p id='creator'>
+                by{' '}
+                <a
+                    href='https://www.instagram.com/thesaucymind/'
+                    id='creator-link'
+                >
+                    nimeshakya
+                </a>
+            </p>
+        </>
     );
 };
 

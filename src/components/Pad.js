@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-const Pad = ({ play, removeClass, triggerKey, file, id, keyCode }) => {
+const Pad = ({ play, removeClass, triggerKey, file, id, keyCode, volume }) => {
     const audioRef = useRef(null);
 
     const handlePadHit = () => {
@@ -17,6 +17,7 @@ const Pad = ({ play, removeClass, triggerKey, file, id, keyCode }) => {
 
     useEffect(() => {
         document.addEventListener('keydown', handleKeyDown);
+        audioRef.current.volume = volume;
     });
 
     return (
