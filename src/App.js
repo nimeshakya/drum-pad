@@ -38,6 +38,7 @@ const App = () => {
                                 id={pad.id}
                                 keyCode={pad.keyCode}
                                 volume={volume}
+                                setCurrentSound={setCurrentSound}
                             />
                         );
                     })}

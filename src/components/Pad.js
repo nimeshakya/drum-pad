@@ -1,11 +1,21 @@
 import React, { useRef, useEffect } from 'react';
 
-const Pad = ({ play, removeClass, triggerKey, file, id, keyCode, volume }) => {
+const Pad = ({
+    play,
+    removeClass,
+    triggerKey,
+    file,
+    id,
+    keyCode,
+    volume,
+    setCurrentSound,
+}) => {
     const audioRef = useRef(null);
 
     const handlePadHit = () => {
         audioRef.current.play();
         audioRef.current.parentElement.className = 'drum-pad-active';
+        setCurrentSound(audioRef.current.parentElement.id);
         setTimeout(() => removeClass(audioRef.current), 100);
     };
 
